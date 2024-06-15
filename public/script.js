@@ -84,7 +84,7 @@ document.getElementById('sendButton').addEventListener('click', function(event) 
   }
 
   // Отправка данных на сервер
-  fetch('/messages', {
+  fetch('/api/messages', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
