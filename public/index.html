@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/effect-coverflow.min.css">
+    
+
+    
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- MENU -->
+    <div class="header-container">
+      <header>
+        <div class="logo">
+          <a href="#">NATALIA</a>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="#start" onclick="select()">HOME</a></li>
+            <li><a href="#about" onclick="select()">ABOUT</a></li>
+            <li><a href="#skills" onclick="select()">SKILLS</a></li>
+            <li><a href="#about" onclick="select()">CV</a></li>
+            <li><a href="#portfolio" onclick="select()">PORTFOLIO</a></li>
+            <li><a href="#contact" onclick="select()">CONTACT</a></li>
+          </ul>
+        </nav>
+        <div class="responsive-nav" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+    </div>
+
+    <!-- START SECTION -->
+    <section id="start" class="start">
+      <div class="banner-content">
+        <div class="img-container">
+          <img src="/img/me.jpg" alt="myphoto" />
+        </div>
+        <h1>NATALIA CARBONEL</h1>
+        <h2>FRONTEND-DEVELOPER</h2>
+        <div class="social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me/NCarbonel" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://www.linkedin.com/in/natalia-carbonel-207ab7268/?locale=en_US" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-me">
+      <div class="section-content">
+        <h2>About Me</h2>
+        <p>
+          <span>Hello, I'm Natalia Carbonel.</span> Once I was a lawyer, and in that profession, I found not only my calling but also enjoyed every moment of my work. However, one day I discovered the amazing world of information technology, and it became a turning point in my life. I learned the basic technologies for Front-End development. Software development has become my great passion and love. Now I aspire to find a job in a team where I can unlock my potential in new ways, continue learning, and growing. I am eager to delve into learning new technologies, creating applications that are not only beautiful but also user-friendly. I am ready to invest all my efforts and energy into projects that will bring positive changes to the world of web development.
+        </p>
+
+        <div class="row">
+          <!-- personal data -->
+          <div class="column">
+            <h3>Personal Data</h3>
+            <ul>
+              <li>
+                <strong>Birthday</strong>
+                12-10-1987
+              </li>
+              <li>
+                <strong>Phone</strong>
+                +33 66 70 33 170
+              </li>
+              <li>
+                <strong>Email</strong>
+                carbonelnata@gmail.com
+              </li>
+              <li>
+                <strong>Website</strong>
+                www.example.com
+              </li>
+              <li>
+                <strong>Address</strong>
+                8 avenue Jeanne De Kervenoael Pontivy France
+              </li>
+              <li>
+                <strong>Position</strong>
+                <span>FREELANCE</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- interests -->
+          <div class="column">
+            <h3>Interests</h3>
+            <div class="interest-container">
+              <div class="interest">
+                <i class="fa-solid fa-headphones"></i>
+                <span>MUSIC</span>
+              </div>
+              <div class="interest">
+                <i class="fa-solid fa-plane"></i>
+                <span>TRAVEL</span>
+              </div>
+              <div class="interest">
+                <i class="fa-solid fa-children"></i>
+                <span>FAMILY</span>
+              </div>
+              <div class="interest">
+                <i class="fa-solid fa-person-hiking"></i>
+                <span>SPORT</span>
+              </div>
+              <div class="interest">
+                <i class="fa-solid fa-book"></i>
+                <span>BOOKS</span>
+              </div>
+              <div class="interest">
+                <i class="fa-solid fa-car"></i>
+                <span>CARS</span>
+              </div>
+              <div class="interest">
+                <i class="fa-solid fa-camera"></i>
+                <span>PHOTOS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="https://cv-carbonel-n.vercel.app/en.html" target="_blank"><button id="btn-cv">
+          Open CV <i class="fa-solid fa-download"></i>
+          <span class="overlay"></span>
+        </button>
+      </a>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills" id="skills">
+      <div class="section-content">
+        <h2>Technical Skills</h2>
+        <div class="row">
+          <div class="col">
+            <div class="skill">
+              <span>Javascript</span>
+              <div class="skill-bar" data-progress="80">
+                <div class="progress">
+                  <span>80%</span>
+                </div>
+              </div>
+            </div><div class="skill">
+              <span>Vue.js</span>
+              <div class="skill-bar" data-progress="60">
+                <div class="progress">
+                  <span>60%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>HTML & CSS</span>
+              <div class="skill-bar" data-progress="89">
+                <div class="progress">
+                  <span>89%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Wordpress</span>
+              <div class="skill-bar" data-progress="30">
+                <div class="progress">
+                  <span>30%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Git</span>
+              <div class="skill-bar" data-progress="40">
+                <div class="progress">
+                  <span>40%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Node.js</span>
+              <div class="skill-bar" data-progress="40">
+                <div class="progress">
+                  <span>40%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    
+    <section id="portfolio" class="portfolio">
+      <div class="section-content">
+        <h2>PORTFOLIO</h2>
+        
+      </div>
+      <div class="portpholio-wrapper">
+        <!-- Slider main container -->
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="/assets/Capture d’écran (4).png" alt=""></div>
+    <div class="swiper-slide"><img src="/assets/Capture d’écran (5).png" alt=""></div>
+    <div class="swiper-slide"><img src="/assets/Capture d’écran (6).png" alt=""></div>
+    <div class="swiper-slide"><img src="/assets/Capture d’écran (7).png" alt=""></div>
+    <div class="swiper-slide"><img src="/assets/Capture d’écran (8).png" alt=""></div>
+    <div class="swiper-slide"><img src="/assets/Capture d’écran (9).png" alt=""></div>
+
+      </div>
+         
+        </div>
+      </div>
+    
+      
+
+    <!-- CONTACT SECTION -->
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <div class="section-content">
+      <h2>CONTACT</h2>
+      <div class="row">
+        <div class="col">
+          <input type="text" id="name" placeholder="Your Name" />
+          <input type="text" id="phone" placeholder="Phone Number" />
+          <input type="text" id="email" placeholder="Email Address" />
+          <input type="text" id="subject" placeholder="Subject" />
+          <textarea id="message" cols="30" rows="10" placeholder="Message"></textarea>
+          <button id="sendButton">
+            Send Message <i class="fa-solid fa-paper-plane"></i>
+            <span class="overlay"></span>
+          </button>
+        </div>
+        <!-- Map -->
+        <div class="col">
+          <div class="info">
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                8 avenue Jeanne De Kervenoael Pontivy France
+              </li>
+              <li>
+                <i class="fa-solid fa-mobile-screen"></i>
+                Call Us: 2384 - 4343443
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                Email: carbonelnata@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- footer -->
+    <footer>
+      <a href="#start" class="top">
+        <i class="fa-solid fa-angles-up"></i>
+      </a>
+      <div class="social">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me/NCarbonel" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://www.linkedin.com/in/natalia-carbonel-207ab7268/?locale=en_US" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
+   <script src="animation.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
