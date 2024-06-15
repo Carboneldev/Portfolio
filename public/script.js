@@ -91,19 +91,20 @@ document.getElementById('sendButton').addEventListener('click', function(event) 
     },
     body: JSON.stringify({ name, phone, email, subject, message })
   })
-  .then(response => response.json())
-  .then(data => {
-    if (data.error) {
-      alert(data.error);
-    } else {
-      alert('Message sent successfully!');
-      // Очистка полей формы после успешной отправки
-      document.getElementById('name').value = '';
-      document.getElementById('phone').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('subject').value = '';
-      document.getElementById('message').value = '';
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
     }
+    return response.json();
+  })
+  .then(data => {
+    alert('Message sent successfully!');
+    // Очистка полей формы
+    document.getElementById('name').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('subject').value = '';
+    document.getElementById('message').value = '';
   })
   .catch(error => {
     console.error('Error:', error);
