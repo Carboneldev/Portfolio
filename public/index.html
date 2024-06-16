@@ -226,22 +226,24 @@
     
       
 
-    <!-- CONTACT SECTION -->
+    
   <!-- CONTACT SECTION -->
   <section id="contact" class="contact">
     <div class="section-content">
       <h2>CONTACT</h2>
       <div class="row">
         <div class="col">
-          <input type="text" id="name" placeholder="Your Name" />
-          <input type="text" id="phone" placeholder="Phone Number" />
-          <input type="text" id="email" placeholder="Email Address" />
-          <input type="text" id="subject" placeholder="Subject" />
-          <textarea id="message" cols="30" rows="10" placeholder="Message"></textarea>
-          <button id="sendButton">
-            Send Message <i class="fa-solid fa-paper-plane"></i>
-            <span class="overlay"></span>
-          </button>
+          <form id="contactForm" action="https://formspree.io/f/xqkrrnge" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+            <input type="text" id="phone" name="phone" placeholder="Phone Number" required />
+            <input type="email" id="email" name="_replyto" placeholder="Email Address" required />
+            <input type="text" id="subject" name="subject" placeholder="Subject" required />
+            <textarea id="message" name="message" cols="30" rows="10" placeholder="Message" required></textarea>
+            <button type="submit" id="sendButton">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+              <span class="overlay"></span>
+            </button>
+          </form>
         </div>
         <!-- Map -->
         <div class="col">

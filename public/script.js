@@ -83,13 +83,14 @@ document.getElementById('sendButton').addEventListener('click', function(event) 
     return;
   }
 
-  // Отправка данных на сервер
-  fetch('/api/messages', {
+  const formData = new FormData(document.getElementById('contactForm'));
+
+  fetch('https://formspree.io/f/xqkrrnge', {
     method: 'POST',
+    body: formData,
     headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ name, phone, email, subject, message })
+      'Accept': 'application/json'
+    }
   })
   .then(response => {
     if (!response.ok) {
@@ -100,11 +101,7 @@ document.getElementById('sendButton').addEventListener('click', function(event) 
   .then(data => {
     alert('Message sent successfully!');
     // Очистка полей формы
-    document.getElementById('name').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('subject').value = '';
-    document.getElementById('message').value = '';
+    document.getElementById('contactForm').reset();
   })
   .catch(error => {
     console.error('Error:', error);
