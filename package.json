@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "main": "animation.js",
+  "main": "index.js",
   "scripts": {
     "start": "vercel dev"
   },

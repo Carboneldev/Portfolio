@@ -1,4 +1,3 @@
-// api/messages.js
 export default function handler(req, res) {
   if (req.method === 'POST') {
     const { name, phone, email, subject, message } = req.body;
@@ -17,3 +16,4 @@ export default function handler(req, res) {
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 }
+
