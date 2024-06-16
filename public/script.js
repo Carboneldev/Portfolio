@@ -100,7 +100,6 @@ document.getElementById('sendButton').addEventListener('click', function(event) 
   })
   .then(data => {
     alert('Message sent successfully!');
-    // Очистка полей формы
     document.getElementById('contactForm').reset();
   })
   .catch(error => {
@@ -109,7 +108,6 @@ document.getElementById('sendButton').addEventListener('click', function(event) 
   });
 });
 
-// Запрет на ввод букв в поле телефона
 document.getElementById('phone').addEventListener('keypress', function(event) {
   const key = event.key;
   if (!/^\d$/.test(key)) {
