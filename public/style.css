@@ -32,7 +32,7 @@ html {
 
 .header-container header .logo a {
     font-family: 'Righteous';
-    font-size: 36px;
+    font-size: 24px;
     color: #1CB698;
     text-decoration: none;
 }
@@ -322,7 +322,7 @@ a {
     padding: 40px;
 }
 
-.col{
+.col-skill{
     width: 100%;
 }
 
@@ -761,9 +761,17 @@ footer .up {
     .contact .row .column {
         width: 100%;
     }
+
+    .contact .info ul li{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 300px) {
+
+    .header-container header .logo a{
+        font-size: 12px;
+    }
     .responsive-nav {
         padding: 5px;
         font-size: 14px;
@@ -776,6 +784,10 @@ footer .up {
 
     nav.responsive ul li {
         font-size: 14px;
+    }
+ 
+    .skills .row{
+        max-width: 200px;
     }
 
     .banner-content {
@@ -818,4 +830,6 @@ footer .up {
     .contact h2 {
         font-size: 36px;
     }
+
+   
 }
