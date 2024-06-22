@@ -1,22 +1,3 @@
-const swiper = new Swiper('.swiper', {
-  effect: 'coverflow',
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  parallax: true,
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 3,
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 1,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-});
 
 let menuVisible = false;
 
@@ -114,3 +95,44 @@ document.getElementById('phone').addEventListener('keypress', function(event) {
     event.preventDefault();
   }
 });
+
+
+var sliderSelector = '.swiper-container',
+options = {
+    init: false,
+    loop: true,
+    speed: 800,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides : true,
+    effect: 'coverflow',
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 60,
+        modifier: 1,
+        slideShadows : true,
+    },
+    grabCursor: true,
+    parallax: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        1000: {
+            slidesPerView: 2,
+            spaceBetween: 0
+        },
+        767: {
+            slidesPerView: 2,
+            spaceBetween: -80
+        }        
+        }
+};
+var mySwiper = new Swiper(sliderSelector, options);
+mySwiper.init();
